@@ -69,6 +69,7 @@ public class SecretNumber {
 				
 				while (userNum > randNum) {
 					System.out.println("\nYou've guessed too high! Guess again...\n");
+					guesses--;
 					
 					if (userNum == randNum) {
 						guesses = 0;
@@ -113,17 +114,17 @@ public class SecretNumber {
 							System.out.println(randNum + " randNum");
 							UserFeedback();
 						} else if (userNum < randNum) {
-							System.out.println("You have guessed too low! You have " + guesses + " left. Guess again: \n");
+							System.out.println("You have guessed too low! You have " + guesses + " left. Guess again: \\n");
 							userNum = input.nextInt();
-							guesses--;
+							guesses --;
 							
 							System.out.println(userNum + " userNum");
 							System.out.println(guesses + " guesses");
 							System.out.println(randNum + " randNum");
 						} else if (userNum > randNum) {
-							System.out.println("You have guessed too high! You have " + guesses + " left. Guess again: \n");
+							System.out.println("You have guessed too high! You have " + guesses + " left. Guess again: \\n");
 							userNum = input.nextInt();
-							guesses--;
+							guesses --;
 							
 							System.out.println(userNum + " userNum");
 							System.out.println(guesses + " guesses");
@@ -133,10 +134,12 @@ public class SecretNumber {
 				}
 				
 				while (userNum < randNum) {
-					System.out.println("You've guessed too low! Guess again...\n");
+					System.out.println("You've guesses too low! Guess again...\n");
+					guesses --;
 					
 					if (guesses == 0) {
 						System.out.println("You are out of guesses. The correct number was " + randNum + ".");
+						
 						UserFeedback();
 						
 						System.out.println(userNum + " userNum");
@@ -145,15 +148,15 @@ public class SecretNumber {
 					} else if (userNum > randNum) {
 						if (guesses == 0) {
 							System.out.println("\nYou are out of guesses. The correct number was " + randNum + ".");
-							UserFeedback();
 							
 							System.out.println(userNum + " userNum");
 							System.out.println(guesses + " guesses");
 							System.out.println(randNum + " randNum");
+							UserFeedback();
 						} else if (userNum < randNum) {
 							System.out.println("You have guessed too low! You have " + guesses + " left. Guess again: \n");
 							userNum = input.nextInt();
-							guesses--;
+							guesses --;
 							
 							System.out.println(userNum + " userNum");
 							System.out.println(guesses + " guesses");
@@ -161,7 +164,7 @@ public class SecretNumber {
 						} else if (userNum > randNum) {
 							System.out.println("You have guessed too high! You have " + guesses + " left. Guess again: \n");
 							userNum = input.nextInt();
-							guesses--;
+							guesses --;
 							
 							System.out.println(userNum + " userNum");
 							System.out.println(guesses + " guesses");
@@ -171,24 +174,23 @@ public class SecretNumber {
 					} else if (userNum < randNum) {
 						if (guesses == 0) {
 							System.out.println("\nYou are out of guesses. The correct number was " + randNum + ".");
-							UserFeedback();
 							
 							System.out.println(userNum + " userNum");
 							System.out.println(guesses + " guesses");
 							System.out.println(randNum + " randNum");
-							
+							UserFeedback();
 						} else if (userNum < randNum) {
-							System.out.println("You have guessed too low! You have " + guesses + " left. Guess again: \n");
+							System.out.println("You have guessed too low! You have " + guesses + " left. Guess again: \\n");
 							userNum = input.nextInt();
-							guesses--;
+							guesses --;
 							
 							System.out.println(userNum + " userNum");
 							System.out.println(guesses + " guesses");
 							System.out.println(randNum + " randNum");
 						} else if (userNum > randNum) {
-							System.out.println("You have guessed too high! You have " + guesses + " left. Guess again: \n");
+							System.out.println("You have guessed too high! You have " + guesses + " left. Guess again: \\n");
 							userNum = input.nextInt();
-							guesses--;
+							guesses --;
 							
 							System.out.println(userNum + " userNum");
 							System.out.println(guesses + " guesses");

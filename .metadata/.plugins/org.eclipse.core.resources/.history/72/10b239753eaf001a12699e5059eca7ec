@@ -113,7 +113,7 @@ public class SecretNumber {
 							System.out.println(randNum + " randNum");
 							UserFeedback();
 						} else if (userNum < randNum) {
-							System.out.println("You have guessed too low! You have " + guesses + " left. Guess again: \n");
+							System.out.println("You have guessed too low! You have " + guesses + " left. Guess again: \\n");
 							userNum = input.nextInt();
 							guesses--;
 							
@@ -121,7 +121,7 @@ public class SecretNumber {
 							System.out.println(guesses + " guesses");
 							System.out.println(randNum + " randNum");
 						} else if (userNum > randNum) {
-							System.out.println("You have guessed too high! You have " + guesses + " left. Guess again: \n");
+							System.out.println("You have guessed too high! You have " + guesses + " left. Guess again: \\n");
 							userNum = input.nextInt();
 							guesses--;
 							
