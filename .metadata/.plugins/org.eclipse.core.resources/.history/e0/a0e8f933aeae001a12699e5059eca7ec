@@ -1,0 +1,53 @@
+/*
+ * Allison Snipes
+ * Course 605.201.81 Summer 2020
+ * Module 3 Question 1
+ * 
+ * Application Requirements:
+ * Write a program that prompts the user to enter the maximum number of asterisks (*) to 
+ * display on a line of output, as well as a choice of two different output patterns. The
+ * program shall then display the asterisks according to one of the patterns below. For 
+ * example, if the user specifies 10 as the maximum number of asterisks, the output should
+ * like the mock-up given.
+*/
+
+public class Stars {
+
+	public static void main(String[] args) {
+		/*
+	     * Here is the main block of my code. I will initialize all of my variables and
+	     * set up the control flow of the application.
+	     */
+		int maxNum, choice, i, j;
+		boolean quit = false;
+		
+		HeaderMessage();
+
+	}
+	
+	private static void HeaderMessage() {
+		System.out.println("\n");
+		System.out.println("+--------------------------------------------------+");
+		System.out.println("|                     Hello User!                  |");
+		System.out.println("|   Please start by entering the maximum number of |");
+		System.out.println("|    asterisks that you want to display. Remember  |");
+		System.out.println("|        to double check that you have entered     |");
+		System.out.println("|       a valid number! Next enter either Tree     |");
+		System.out.println("|                or (2) for a Tornado!             |");
+		System.out.println("+--------------------------------------------------+");
+		System.out.println("\n");
+	}
+	
+	public static void MaxMessage() {
+		System.out.println("Enter the maximum number of asterisks to display.");
+	}
+	
+	private static void TreeMessage() {
+		System.out.println("Right on! Let's see a tree!");
+	}
+	
+	private static void TornadoMessage() {
+		System.out.println("Right on! Let's see a tornado!");
+	}
+
+}

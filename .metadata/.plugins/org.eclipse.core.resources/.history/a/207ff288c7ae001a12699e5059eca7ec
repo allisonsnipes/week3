@@ -1,0 +1,107 @@
+import java.util.Scanner;
+
+/*
+ * Allison Snipes
+ * Course 605.201.81 Summer 2020
+ * Module 3 Question 1
+ * 
+ * Application Requirements:
+ * Write a program that prompts the user to enter the maximum number of asterisks (*) to 
+ * display on a line of output, as well as a choice of two different output patterns. The
+ * program shall then display the asterisks according to one of the patterns below. For 
+ * example, if the user specifies 10 as the maximum number of asterisks, the output should
+ * like the mock-up given.
+*/
+
+public class Stars {
+
+	public static void main(String[] args) {
+		/*
+	     * Here is the main block of my code. 
+	     * 1. I will initialize all of my variables 
+	     * 2. I will set set up a basic error handle in my if/else statement to ctrl for 
+	     *    nonnumbers by the user (can't mix NaN and int for operands).
+	     * 3. I need to think about how I should set up the flow of my program (need to use switch statements).
+	     */
+		int maxNum, choice, i, j;
+		boolean quit = false;
+		
+		HeaderMessage();
+		
+		System.out.println("Enter the maximum number of asterisks you want to see: ");
+		
+		Scanner input = new Scanner(System.in);
+		maxNum = input.nextInt();
+		
+		
+		/*
+	     * I decided to code this part of my application by first using an if statement to do
+	     * some minimal error handling. The program will automatically quit if the user does not
+	     * enter the correct selection. 
+	     * 
+	     * Depending on the type of input the application will display a message of what the user 
+	     * selected: choice 1: will display a tornado, choice 2: will display a tree, the default 
+	     * option will quit the program for error handling.
+	     * 
+	     * To make the star pattern: Use page 199 as a reference to see how to use a nested loop,
+	     * then reverse the logic to make a tree (need the opposite).
+	     * However, use a switch selection statement to include the choice of a pattern.
+	     */
+		
+		if ((maxNum <= 0) || (maxNum >= 1000)) {
+			System.out.println("\nPlease enter a number less than 1000.");
+			quit = true;
+		} else {
+			System.out.println("\nPlease enter a (1) or (2)");
+			choice = input.nextInt();
+
+			switch (choice) {
+			case 1:
+				TornadoMessage();
+				for (i = 0; i < maxNum; i++) {
+					for (j = i; j < maxNum; j++ ) {
+						System.out.print(" * ");
+					}	
+					System.out.println();
+				}				
+				break;
+				
+			case 2:
+				TreeMessage();
+				for (i = 1; i <= maxNum; ++i) {
+					for (j = 1; j <= i;  ++j) {
+						System.out.print(" * ");
+					}	
+					System.out.println("");
+				}
+				break;
+				
+			default:
+				System.out.println("OOPS! Please enter a (1) or (2)!");
+				break;
+			}
+		}
+	}
+	
+	private static void HeaderMessage() {
+		System.out.println("\n");
+		System.out.println("+----------------------------------------------------+");
+		System.out.println("|                     Hello User!                    |");
+		System.out.println("|   Please start by entering the maximum number of   |");
+		System.out.println("|    asterisks that you want to display. Remember    |");
+		System.out.println("|        to double check that you have entered       |");
+		System.out.println("| a valid number! Next enter either a (1) for a Tree |");
+		System.out.println("|                or (2) for a Tornado!               |");
+		System.out.println("+----------------------------------------------------+");
+		System.out.println("\n");
+	}
+	
+	private static void TreeMessage() {
+		System.out.println("\nRight on! Let's see a tree!\n");
+	}
+	
+	private static void TornadoMessage() {
+		System.out.println("\nRight on! Let's see a tornado!\n");
+	}
+
+}

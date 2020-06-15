@@ -1,0 +1,34 @@
+
+public class Stars {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	private static void HeaderMessage() {
+		System.out.println("\n");
+		System.out.println("+--------------------------------------------------+");
+		System.out.println("|                     Hello User!                  |");
+		System.out.println("|   Please start by entering the maximum number of |");
+		System.out.println("|    asterisks that you want to display. Remember  |");
+		System.out.println("|        to double check that you have entered     |");
+		System.out.println("|       a valid number! Next enter either Tree     |");
+		System.out.println("|                or (2) for a Tornado!             |");
+		System.out.println("+--------------------------------------------------+");
+		System.out.println("\n");
+	}
+	
+	public static void MaxMsg() {
+		System.out.println("Enter the maximum number of asterisks to display.");
+	}
+	
+	private static void TreeMsg() {
+		System.out.println("Right on! Let's see a tree!");
+	}
+	
+	private static void TornadoMsg() {
+		System.out.println("Right on! Let's see a tornado!");
+	}
+
+}
