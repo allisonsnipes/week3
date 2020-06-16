@@ -19,9 +19,10 @@ public class Stars {
 	     * Here is the main block of my code. 
 	     * 1. I will initialize all of my variables 
 	     * 2. I will set set up a basic error handle in my if/else statement to ctrl for 
-	     *    nonnumbers by the user (can't mix NaN and int for operands). And for the max amount of stars.
+	     *    non-numbers by the user (remember you can't mix NaN and int for operands). And for the max amount of stars.
 	     * 3. I need to think about how I should set up the flow of my program (need to use switch statements).
-	     * 4. after the switch statements i need to figure out how to get the patterns
+	     * 4. after the switch statements i need to figure out how to get the patterns (use a nested for loop like in the 
+	     *    book and trial and error from there).
 	     */
 		int maxNum, choice, i, j;
 		boolean quit = false;
